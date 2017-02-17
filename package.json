@@ -1,33 +1,34 @@
 {
-  "name": "asteridux",
+  "name": "alterdux",
   "version": "1.0.0",
-  "description": "Library starter for all asteridux projects",
+  "description": "A Redux-like Redux-compatible library with some extra proof of concept features",
   "main": "./build/lib.js",
   "scripts": {
     "release:init": "standard-version --first-release",
     "release": "standard-version",
     "prepublish": "npm run build",
-    "build": "webpack",
-    "watch:build": "webpack --watch",
+    "prebuild": "rimraf build && mkdir build",
+    "build": "babel index.js src --out-dir ./build",
     "test": "jest",
     "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/asteridux/asteridux.git"
+    "url": "git+https://github.com/asteridux/alterdux.git"
   },
   "author": "Antonin Januska <antonin@antjanus.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/asteridux/asteridux/issues"
+    "url": "https://github.com/asteridux/alterdux/issues"
   },
-  "homepage": "https://github.com/asteridux/asteridux#readme",
+  "homepage": "https://github.com/asteridux/alterdux#readme",
   "devDependencies": {
     "babel-core": "6.23.1",
     "babel-jest": "18.0.0",
     "babel-loader": "6.3.1",
     "babel-preset-env": "1.1.8",
     "jest": "18.1.0",
+    "rimraf": "2.5.4",
     "standard": "8.6.0",
     "standard-version": "4.0.0",
     "webpack": "2.2.1"
