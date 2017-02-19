@@ -8,7 +8,7 @@
     "release": "standard-version",
     "prepublish": "npm run build",
     "prebuild": "rimraf build && mkdir build",
-    "build": "babel index.js src --out-dir ./build",
+    "build": "rollup index.js --output ./build/lib.js --format cjs",
     "test": "jest",
     "test:watch": "jest --watch"
   },
@@ -25,17 +25,17 @@
   "devDependencies": {
     "babel-core": "6.23.1",
     "babel-jest": "18.0.0",
-    "babel-loader": "6.3.1",
     "babel-preset-env": "1.1.8",
     "jest": "18.1.0",
     "rimraf": "2.5.4",
+    "rollup": "0.41.4",
     "standard": "8.6.0",
-    "standard-version": "4.0.0",
-    "webpack": "2.2.1"
+    "standard-version": "4.0.0"
   },
   "jest": {
     "bail": true,
     "collectCoverage": true,
     "verbose": true
-  }
+  },
+  "dependencies": {}
 }
