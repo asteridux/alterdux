@@ -1,6 +1,6 @@
 {
   "name": "alterdux",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Redux-like Redux-compatible library with some extra proof of concept features",
   "main": "./build/lib.js",
   "scripts": {
