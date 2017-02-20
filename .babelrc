@@ -1,9 +1,7 @@
 {
   "presets": [
     ["env", {
-      "targets": {
-        "node": true
-      }
+      "modules": false
     }]
   ]
 }

@@ -8,7 +8,7 @@
     "release": "standard-version",
     "prepublish": "npm run build",
     "prebuild": "rimraf build && mkdir build",
-    "build": "rollup index.js --output ./build/lib.js --format cjs",
+    "build": "rollup --config",
     "test": "jest",
     "test:watch": "jest --watch"
   },
@@ -29,6 +29,7 @@
     "jest": "18.1.0",
     "rimraf": "2.5.4",
     "rollup": "0.41.4",
+    "rollup-plugin-babel": "2.7.1",
     "standard": "8.6.0",
     "standard-version": "4.0.0"
   },
