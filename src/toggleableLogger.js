@@ -3,7 +3,11 @@ export function toggleableLogger(createStore) {
     const store = createStore(reducer, initialState, enhancer);
     var toggle = false;
 
-    let toggleLog = () => { !toggle };
+    let toggleLog = () => {
+      toggle = !toggle;
+
+      return toggle;
+     };
 
     let dispatch = (state, action) => {
       if (toggle) { console.log(state, action) }

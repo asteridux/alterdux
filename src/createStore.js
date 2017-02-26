@@ -31,5 +31,9 @@ export function createStore(reducer, initialState, enhancer) {
     });
   }
 
-  return { subscribe, dispatch };
+  function getState() {
+    return state;
+  }
+
+  return { subscribe, dispatch, getState };
 }
